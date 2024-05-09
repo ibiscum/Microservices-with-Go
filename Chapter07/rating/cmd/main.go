@@ -8,12 +8,12 @@ import (
 	"net"
 	"time"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/consul"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/controller/rating"
-	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/handler/grpc"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository/mysql"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/rating/internal/controller/rating"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter07/rating/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/rating/internal/repository/mysql"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

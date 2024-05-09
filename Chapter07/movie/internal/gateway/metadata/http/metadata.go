@@ -8,9 +8,9 @@ import (
 	"math/rand"
 	"net/http"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/movie/internal/gateway"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/pkg/discovery"
 )
 
 // Gateway defines a movie metadata HTTP gateway.

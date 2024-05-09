@@ -4,7 +4,7 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter07/pkg/discovery"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
