@@ -82,13 +82,13 @@ func main() {
 	h := grpchandler.New(ctrl)
 	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", port))
 	if err != nil {
-		log.Fatalf("Failed to listen", zap.Error(err))
+		log.Fatalf("Failed to listen: %v", zap.Error(err))
 	}
 	srv := grpc.NewServer(grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()))
 	reflection.Register(srv)
 	gen.RegisterMovieServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
-		log.Fatalf("Failed to start the gRPC server", zap.Error(err))
+		log.Fatalf("Failed to start the gRPC server: %v", zap.Error(err))
 	}
 }
 

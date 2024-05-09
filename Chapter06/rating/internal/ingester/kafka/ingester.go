@@ -5,13 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
 	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/pkg/model"
 )
 
 // Ingester defines a Kafka ingester.
 type Ingester struct {
-	consumer kafka.Consumer
+	consumer *kafka.Consumer
 	topic    string
 }
 
