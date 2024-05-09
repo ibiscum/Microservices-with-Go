@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/controller/metadata"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/metadata/internal/controller/metadata"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/metadata/pkg/model"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

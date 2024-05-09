@@ -1,10 +1,10 @@
 package testutil
 
 import (
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/controller/metadata"
-	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/handler/grpc"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository/memory"
+	"github.com/ibiscum/Microservices-with-Go/Chapter10/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter10/metadata/internal/controller/metadata"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter10/metadata/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter10/metadata/internal/repository/memory"
 )
 
 // NewTestMetadataGRPCServer creates a new metadata gRPC server to be used in tests.

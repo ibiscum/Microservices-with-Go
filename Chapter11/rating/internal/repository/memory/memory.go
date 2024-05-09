@@ -3,8 +3,8 @@ package memory
 import (
 	"context"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/rating/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/rating/pkg/model"
 )
 
 // Repository defines a rating repository.

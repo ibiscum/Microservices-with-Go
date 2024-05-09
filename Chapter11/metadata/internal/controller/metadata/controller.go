@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/metadata/pkg/model"
 )
 
 // ErrNotFound is returned when a requested record is not found.
