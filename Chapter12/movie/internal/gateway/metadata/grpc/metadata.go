@@ -3,10 +3,10 @@ package grpc
 import (
 	"context"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/internal/grpcutil"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/internal/grpcutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/pkg/discovery"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

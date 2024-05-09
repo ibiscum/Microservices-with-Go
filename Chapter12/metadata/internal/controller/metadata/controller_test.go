@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	gen "github.com/ibiscum/Microservices-with-Go/Chapter0X/gen/mock/metadata/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	gen "github.com/ibiscum/Microservices-with-Go/Chapter12/gen/mock/metadata/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/metadata/pkg/model"
 	"github.com/stretchr/testify/assert"
 )
 
