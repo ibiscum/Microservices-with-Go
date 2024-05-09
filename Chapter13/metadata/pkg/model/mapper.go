@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/gen"
 )
 
 // MetadataToProto converts a Metadata struct into a generated proto counterpart.

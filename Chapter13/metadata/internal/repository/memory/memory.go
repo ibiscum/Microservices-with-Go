@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/metadata/pkg/model"
 )
 
 // Repository defines a memory movie matadata repository.
