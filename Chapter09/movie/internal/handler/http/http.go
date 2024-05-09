@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/controller/movie"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/movie/internal/controller/movie"
 )
 
 // Handler defines a movie handler.

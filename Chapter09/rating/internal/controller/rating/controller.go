@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/rating/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/rating/pkg/model"
 )
 
 // ErrNotFound is returned when no ratings are found for a record.

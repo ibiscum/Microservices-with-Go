@@ -1,12 +1,12 @@
 package testutil
 
 import (
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/controller/movie"
-	metadatagateway "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway/metadata/grpc"
-	ratinggateway "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway/rating/grpc"
-	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/handler/grpc"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/movie/internal/controller/movie"
+	metadatagateway "github.com/ibiscum/Microservices-with-Go/Chapter09/movie/internal/gateway/metadata/grpc"
+	ratinggateway "github.com/ibiscum/Microservices-with-Go/Chapter09/movie/internal/gateway/rating/grpc"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter09/movie/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter09/pkg/discovery"
 )
 
 // NewTestMovieGRPCServer creates a new movie gRPC server to be used in tests.
