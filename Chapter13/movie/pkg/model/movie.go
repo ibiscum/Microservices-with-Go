@@ -1,6 +1,6 @@
 package model
 
-import "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+import "github.com/ibiscum/Microservices-with-Go/Chapter13/metadata/pkg/model"
 
 // MovieDetails includes movie metadata its aggregated rating.
 type MovieDetails struct {
