@@ -20,7 +20,6 @@ import (
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	"go.uber.org/zap"
-	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"gopkg.in/yaml.v3"
@@ -92,14 +91,14 @@ func main() {
 	}
 }
 
-type limiter struct {
-	l *rate.Limiter
-}
+// type limiter struct {
+// 	l *rate.Limiter
+// }
 
-func newLimiter(limit int, burst int) *limiter {
-	return &limiter{rate.NewLimiter(rate.Limit(limit), burst)}
-}
+// func newLimiter(limit int, burst int) *limiter {
+// 	return &limiter{rate.NewLimiter(rate.Limit(limit), burst)}
+// }
 
-func (l *limiter) Limit() bool {
-	return l.l.Allow()
-}
+// func (l *limiter) Limit() bool {
+// 	return l.l.Allow()
+// }

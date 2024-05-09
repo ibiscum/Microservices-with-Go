@@ -1,23 +1,33 @@
 package main
 
 import (
+	"log"
 	"testing"
 )
 
 func BenchmarkSerializeToJSON(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		serializeToJSON(metadata)
+		_, err := serializeToJSON(metadata)
+		if err != nil {
+			log.Panic(err)
+		}
 	}
 }
 
 func BenchmarkSerializeToXML(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		serializeToXML(metadata)
+		_, err := serializeToXML(metadata)
+		if err != nil {
+			log.Panic(err)
+		}
 	}
 }
 
 func BenchmarkSerializeToProto(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		serializeToProto(genMetadata)
+		_, err := serializeToProto(genMetadata)
+		if err != nil {
+			log.Panic(err)
+		}
 	}
 }

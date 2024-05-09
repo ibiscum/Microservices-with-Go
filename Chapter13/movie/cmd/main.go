@@ -20,7 +20,6 @@ import (
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	"go.uber.org/zap"
-	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"gopkg.in/yaml.v3"
@@ -82,24 +81,24 @@ func main() {
 	h := grpchandler.New(ctrl)
 	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", port))
 	if err != nil {
-		log.Fatalf("Failed to listen", zap.Error(err))
+		log.Fatalf("Failed to listen: %v", zap.Error(err))
 	}
 	srv := grpc.NewServer(grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()))
 	reflection.Register(srv)
 	gen.RegisterMovieServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
-		log.Fatalf("Failed to start the gRPC server", zap.Error(err))
+		log.Fatalf("Failed to start the gRPC server: %v", zap.Error(err))
 	}
 }
 
-type limiter struct {
-	l *rate.Limiter
-}
+// type limiter struct {
+// 	l *rate.Limiter
+// }
 
-func newLimiter(limit int, burst int) *limiter {
-	return &limiter{rate.NewLimiter(rate.Limit(limit), burst)}
-}
+// func newLimiter(limit int, burst int) *limiter {
+// 	return &limiter{rate.NewLimiter(rate.Limit(limit), burst)}
+// }
 
-func (l *limiter) Limit() bool {
-	return l.l.Allow()
-}
+// func (l *limiter) Limit() bool {
+// 	return l.l.Allow()
+// }

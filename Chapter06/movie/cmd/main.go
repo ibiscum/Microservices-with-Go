@@ -30,7 +30,12 @@ func main() {
 	if err := registry.Register(ctx, instanceID, serviceName, fmt.Sprintf("localhost:%d", port)); err != nil {
 		panic(err)
 	}
-	defer registry.Deregister(ctx, instanceID, serviceName)
+	defer func() {
+		err := registry.Deregister(ctx, instanceID, serviceName)
+		if err != nil {
+			log.Panic(err)
+		}
+	}()
 	metadataGateway := metadatagateway.New(registry)
 	ratingGateway := ratinggateway.New(registry)
 	ctrl := movie.New(ratingGateway, metadataGateway)

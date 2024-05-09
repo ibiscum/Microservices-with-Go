@@ -5,7 +5,6 @@ import (
 	"crypto/md5"
 	"flag"
 	"fmt"
-	"math/rand"
 	"net"
 	"net/http"
 	_ "net/http/pprof"
@@ -35,7 +34,6 @@ const serviceName = "metadata"
 func heavyOperation() {
 	for {
 		token := make([]byte, 1024)
-		rand.Read(token)
 		md5.New().Write(token)
 	}
 }
