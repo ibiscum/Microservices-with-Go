@@ -7,12 +7,12 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
-	metadatatest "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/testutil"
-	movietest "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/pkg/testutil"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/memory"
-	ratingtest "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/testutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/gen"
+	metadatatest "github.com/ibiscum/Microservices-with-Go/Chapter13/metadata/pkg/testutil"
+	movietest "github.com/ibiscum/Microservices-with-Go/Chapter13/movie/pkg/testutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter13/pkg/discovery/memory"
+	ratingtest "github.com/ibiscum/Microservices-with-Go/Chapter13/rating/pkg/testutil"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
