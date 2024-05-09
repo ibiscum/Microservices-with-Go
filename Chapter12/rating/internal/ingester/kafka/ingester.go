@@ -4,10 +4,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"rating/pkg/model"
 
-	"github.com/confluentinc/confluent-kafka-go/kafka"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model"
+	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/rating/pkg/model"
 )
 
 // Ingester defines a Kafka ingester.

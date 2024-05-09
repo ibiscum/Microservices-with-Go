@@ -5,8 +5,8 @@ import (
 	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository"
-	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/rating/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter12/rating/pkg/model"
 )
 
 // Repository defines a MySQL-based rating repository.
