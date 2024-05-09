@@ -7,16 +7,16 @@ import (
 	"net"
 	"os"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/controller/movie"
+	metadatagateway "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway/metadata/grpc"
+	ratinggateway "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway/rating/grpc"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/memory"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"gopkg.in/yaml.v3"
-	"movieexample.com/gen"
-	"movieexample.com/movie/internal/controller/movie"
-	metadatagateway "movieexample.com/movie/internal/gateway/metadata/grpc"
-	ratinggateway "movieexample.com/movie/internal/gateway/rating/grpc"
-	grpchandler "movieexample.com/movie/internal/handler/grpc"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/memory"
 )
 
 const serviceName = "movie"

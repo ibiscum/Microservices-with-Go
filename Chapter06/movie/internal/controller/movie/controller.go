@@ -4,17 +4,17 @@ import (
 	"context"
 	"errors"
 
-	metadatamodel "movieexample.com/metadata/pkg/model"
-	"movieexample.com/movie/internal/gateway"
-	"movieexample.com/movie/pkg/model"
-	ratingmodel "movieexample.com/rating/pkg/model"
+	metadatamodel "github.com/ibiscum/Microservices-with-Go/Chapter06/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/movie/internal/gateway"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/movie/pkg/model"
+	ratingmodel "github.com/ibiscum/Microservices-with-Go/Chapter06/rating/pkg/model"
 )
 
 // ErrNotFound is returned when the movie metadata is not found.
 var ErrNotFound = errors.New("movie metadata not found")
 
 type ratingGateway interface {
-	GetAggregatedRating(ctx context.Context, recordID ratingmodel.RecordID, recordType ratingmodel.RecordType) (float64, error)	
+	GetAggregatedRating(ctx context.Context, recordID ratingmodel.RecordID, recordType ratingmodel.RecordType) (float64, error)
 }
 
 type metadataGateway interface {

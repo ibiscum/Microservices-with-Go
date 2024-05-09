@@ -3,10 +3,10 @@ package grpc
 import (
 	"context"
 
-	"movieexample.com/gen"
-	"movieexample.com/internal/grpcutil"
-	"movieexample.com/metadata/pkg/model"
-	"movieexample.com/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/internal/grpcutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
 )
 
 // Gateway defines a movie metadata gRPC gateway.

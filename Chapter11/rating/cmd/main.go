@@ -7,6 +7,13 @@ import (
 	"os"
 	"time"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/tracing"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/controller/rating"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository/memory"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
@@ -14,13 +21,6 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"gopkg.in/yaml.v3"
-	"movieexample.com/gen"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
-	"movieexample.com/pkg/tracing"
-	"movieexample.com/rating/internal/controller/rating"
-	grpchandler "movieexample.com/rating/internal/handler/grpc"
-	"movieexample.com/rating/internal/repository/memory"
 )
 
 const serviceName = "rating"

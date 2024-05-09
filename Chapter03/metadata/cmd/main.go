@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/ibiscum/Microservices-with-Go/Chapter03/metadata/internal/controller/metadata"
-	httphandler "movieexample.com/metadata/internal/handler/http"
-	"movieexample.com/metadata/internal/repository/memory"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
+	httphandler "github.com/ibiscum/Microservices-with-Go/Chapter03/metadata/internal/handler/http"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/metadata/internal/repository/memory"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/pkg/discovery/consul"
 )
 
 const serviceName = "metadata"

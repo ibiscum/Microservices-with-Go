@@ -4,9 +4,9 @@ import (
 	"context"
 	"math/rand"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/pkg/discovery"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"movieexample.com/pkg/discovery"
 )
 
 // ServiceConnection attempts to select a random service instance and returns a gRPC connection to it.

@@ -1,11 +1,11 @@
-package controller
+package metadata
 
 import (
 	"context"
 	"errors"
 
 	"github.com/ibiscum/Microservices-with-Go/Chapter03/metadata/internal/repository"
-	"movieexample.com/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/metadata/pkg/model"
 )
 
 // ErrNotFound is returned when a requested record is not found.

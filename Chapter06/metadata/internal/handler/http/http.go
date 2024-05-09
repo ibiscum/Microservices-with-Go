@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"movieexample.com/metadata/internal/controller/metadata"
-	"movieexample.com/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/metadata/internal/controller/metadata"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/metadata/internal/repository"
 )
 
 // Handler defines a movie metadata HTTP handler.

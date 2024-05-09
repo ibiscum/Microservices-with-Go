@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"movieexample.com/rating/internal/controller/rating"
-	"movieexample.com/rating/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/rating/internal/controller/rating"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/rating/pkg/model"
 )
 
 // Handler defines a HTTP rating handler.

@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	"movieexample.com/movie/internal/controller/movie"
-	metadatagateway "movieexample.com/movie/internal/gateway/metadata/http"
-	ratinggateway "movieexample.com/movie/internal/gateway/rating/http"
-	httphandler "movieexample.com/movie/internal/handler/http"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/movie/internal/controller/movie"
+	metadatagateway "github.com/ibiscum/Microservices-with-Go/Chapter04/movie/internal/gateway/metadata/http"
+	ratinggateway "github.com/ibiscum/Microservices-with-Go/Chapter04/movie/internal/gateway/rating/http"
+	httphandler "github.com/ibiscum/Microservices-with-Go/Chapter04/movie/internal/handler/http"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/pkg/discovery/consul"
 )
 
 const serviceName = "movie"

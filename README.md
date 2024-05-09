@@ -18,12 +18,12 @@ This book covers the following exciting features:
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1804617008) today!
 
-<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png"
 alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Errata
 
-* Page 39: In the Handler section, the import statement "movieexample.com/rating/internal/controller" must be read as "movieexample.com/rating/internal/controller/rating".
+* Page 39: In the Handler section, the import statement "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/controller" must be read as "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/controller/rating".
 * Page 64-67: The types "serviceName" and "instanceID" are defined, but these same names are also used as method parameters, causing a naming clash as the methods Register, Deregister, ReportHealthyState and ServiceAddresses also access the serviceAddrs slice which uses serviceName and instanceID as types also.
 * Page 69: The for loop on this page must be read as " for _, e := range entries {        res = append(res, fmt.Sprintf("%s:%d", e.Service.Address, e.Service.Port)))    }". That is "res = append(res, " is repeated twice which must be ignored.
 
@@ -47,9 +47,9 @@ import (
     “fmt”
     “os”
     “time”
-    
-    “github.com/confluentinc/confluent-kafka-go/kafka”    
-    “movieexample.com/rating/pkg/model”
+
+    “github.com/confluentinc/confluent-kafka-go/kafka”
+    “github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model”
 )
 ```
 

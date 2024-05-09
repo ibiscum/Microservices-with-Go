@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/controller/movie"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"movieexample.com/gen"
-	"movieexample.com/metadata/pkg/model"
-	"movieexample.com/movie/internal/controller/movie"
 )
 
 // Handler defines a movie gRPC handler.
@@ -40,7 +40,7 @@ func (h *Handler) GetMovieDetails(ctx context.Context, req *gen.GetMovieDetailsR
 	return &gen.GetMovieDetailsResponse{
 		MovieDetails: &gen.MovieDetails{
 			Metadata: model.MetadataToProto(&m.Metadata),
-			Rating:  rating,
+			Rating:   rating,
 		},
 	}, nil
 }

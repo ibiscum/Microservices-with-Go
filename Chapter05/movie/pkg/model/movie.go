@@ -1,9 +1,9 @@
 package model
 
-import "movieexample.com/metadata/pkg/model"
+import "github.com/ibiscum/Microservices-with-Go/Chapter05/metadata/pkg/model"
 
 // MovieDetails includes movie metadata its aggregated rating.
 type MovieDetails struct {
-	Rating   *float64       `json:"rating,omitEmpty"`
-	Metadata model.Metadata `json:"metadata`
+	Rating   *float64       `json:"rating,omitempty"`
+	Metadata model.Metadata `json:"metadata"`
 }

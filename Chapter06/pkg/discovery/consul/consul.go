@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	consul "github.com/hashicorp/consul/api"
-	"movieexample.com/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/pkg/discovery"
 )
 
 // Registry defines a Consul-based service regisry.

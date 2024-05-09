@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"movieexample.com/metadata/internal/repository"
-	"movieexample.com/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/pkg/model"
 )
 
 // ErrNotFound is returned when a requested record is not found.

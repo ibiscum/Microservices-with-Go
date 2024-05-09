@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/movie/internal/controller/movie"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"movieexample.com/gen"
-	"movieexample.com/metadata/pkg/model"
-	"movieexample.com/movie/internal/controller/movie"
 )
 
 // Handler defines a movie gRPC handler.

@@ -2,19 +2,19 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"flag"
+	"fmt"
 	"log"
 	"net"
 	"time"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/internal/controller/rating"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter06/rating/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/internal/repository/memory"
 	"google.golang.org/grpc"
-	"movieexample.com/gen"
-	"movieexample.com/rating/internal/controller/rating"
-	grpchandler "movieexample.com/rating/internal/handler/grpc"
-	"movieexample.com/rating/internal/repository/memory"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
 )
 
 const serviceName = "rating"

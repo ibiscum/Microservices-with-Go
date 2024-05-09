@@ -5,9 +5,9 @@ import (
 	"encoding/xml"
 	"fmt"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/pkg/model"
 	"google.golang.org/protobuf/proto"
-	"movieexample.com/gen"
-	"movieexample.com/metadata/pkg/model"
 )
 
 var metadata = &model.Metadata{

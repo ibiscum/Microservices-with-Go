@@ -7,14 +7,14 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	metadatatest "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/testutil"
+	movietest "github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/pkg/testutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/memory"
+	ratingtest "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/testutil"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"movieexample.com/gen"
-	metadatatest "movieexample.com/metadata/pkg/testutil"
-	movietest "movieexample.com/movie/pkg/testutil"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/memory"
-	ratingtest "movieexample.com/rating/pkg/testutil"
 )
 
 const (

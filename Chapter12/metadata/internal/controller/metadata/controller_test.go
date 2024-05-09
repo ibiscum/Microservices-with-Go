@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
+	gen "github.com/ibiscum/Microservices-with-Go/Chapter0X/gen/mock/metadata/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
 	"github.com/stretchr/testify/assert"
-	gen "movieexample.com/gen/mock/metadata/repository"
-	"movieexample.com/metadata/internal/repository"
-	"movieexample.com/metadata/pkg/model"
 )
 
 func TestController(t *testing.T) {

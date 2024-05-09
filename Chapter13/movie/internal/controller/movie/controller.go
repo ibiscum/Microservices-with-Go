@@ -5,10 +5,10 @@ import (
 	"errors"
 	"sync"
 
-	metadatamodel "movieexample.com/metadata/pkg/model"
-	"movieexample.com/movie/internal/gateway"
-	"movieexample.com/movie/pkg/model"
-	ratingmodel "movieexample.com/rating/pkg/model"
+	metadatamodel "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/internal/gateway"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/movie/pkg/model"
+	ratingmodel "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/pkg/model"
 )
 
 // ErrNotFound is returned when the movie metadata is not found.

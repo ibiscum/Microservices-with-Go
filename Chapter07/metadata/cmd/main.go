@@ -8,14 +8,14 @@ import (
 	"net"
 	"time"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/controller/metadata"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository/memory"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/consul"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"movieexample.com/gen"
-	"movieexample.com/metadata/internal/controller/metadata"
-	grpchandler "movieexample.com/metadata/internal/handler/grpc"
-	"movieexample.com/metadata/internal/repository/memory"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
 )
 
 const serviceName = "metadata"

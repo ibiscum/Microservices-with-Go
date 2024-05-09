@@ -8,9 +8,9 @@ import (
 	"math/rand"
 	"net/http"
 
-	"movieexample.com/movie/internal/gateway"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/rating/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/movie/internal/gateway"
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter05/rating/pkg/model"
 )
 
 // Gateway defines an HTTP gateway for a rating service.

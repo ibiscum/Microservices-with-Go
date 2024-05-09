@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"time"
 
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
-	"movieexample.com/rating/internal/controller/rating"
-	httphandler "movieexample.com/rating/internal/handler/http"
-	"movieexample.com/rating/internal/repository/memory"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/rating/internal/controller/rating"
+	httphandler "github.com/ibiscum/Microservices-with-Go/Chapter03/rating/internal/handler/http"
+	"github.com/ibiscum/Microservices-with-Go/Chapter03/rating/internal/repository/memory"
 )
 
 const serviceName = "rating"

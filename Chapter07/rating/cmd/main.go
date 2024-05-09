@@ -8,14 +8,14 @@ import (
 	"net"
 	"time"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/controller/rating"
+	grpchandler "github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/handler/grpc"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/rating/internal/repository/mysql"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"movieexample.com/gen"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
-	"movieexample.com/rating/internal/controller/rating"
-	grpchandler "movieexample.com/rating/internal/handler/grpc"
-	"movieexample.com/rating/internal/repository/mysql"
 )
 
 const serviceName = "rating"

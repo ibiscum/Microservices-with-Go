@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"time"
 
-	"movieexample.com/metadata/internal/controller/metadata"
-	httphandler "movieexample.com/metadata/internal/handler/http"
-	"movieexample.com/metadata/internal/repository/memory"
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/pkg/discovery/consul"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/internal/controller/metadata"
+	httphandler "github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/internal/handler/http"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/metadata/internal/repository/memory"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter04/pkg/discovery/consul"
 )
 
 const serviceName = "metadata"

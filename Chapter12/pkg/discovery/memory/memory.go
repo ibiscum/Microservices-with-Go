@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"movieexample.com/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/pkg/discovery"
 )
 
 // Registry defines an in-memory service regisry.

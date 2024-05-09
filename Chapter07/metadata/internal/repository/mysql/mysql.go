@@ -6,8 +6,8 @@ import (
 	"metadata/pkg/model"
 
 	_ "github.com/go-sql-driver/mysql"
-	"movieexample.com/metadata/internal/repository"
-	"movieexample.com/metadata/pkg/model"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/internal/repository"
+	"github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
 )
 
 // Repository defines a MySQL-based movie matadata repository.

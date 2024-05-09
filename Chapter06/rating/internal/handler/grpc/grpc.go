@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/internal/controller/rating"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/pkg/model"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"movieexample.com/gen"
-	"movieexample.com/rating/internal/controller/rating"
-	"movieexample.com/rating/pkg/model"
 )
 
 // Handler defines a gRPC rating API handler.

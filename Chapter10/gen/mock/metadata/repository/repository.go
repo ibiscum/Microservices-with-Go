@@ -7,7 +7,7 @@ package repository
 import (
 	context "context"
 	gomock "github.com/golang/mock/gomock"
-	model "movieexample.com/metadata/pkg/model"
+	model "github.com/ibiscum/Microservices-with-Go/Chapter0X/metadata/pkg/model"
 	reflect "reflect"
 )
 

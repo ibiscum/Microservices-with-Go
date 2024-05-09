@@ -3,10 +3,10 @@ package grpc
 import (
 	"context"
 
-	"movieexample.com/pkg/discovery"
-	"movieexample.com/rating/pkg/model"
-	"movieexample.com/gen"
-	"movieexample.com/internal/grpcutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/gen"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/internal/grpcutil"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter06/rating/pkg/model"
 )
 
 // Gateway defines an gRPC gateway for a rating service.
