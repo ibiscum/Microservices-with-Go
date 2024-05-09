@@ -4,7 +4,7 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/ibiscum/Microservices-with-Go/Chapter13/pkg/discovery"
+	"github.com/ibiscum/Microservices-with-Go/Chapter11/pkg/discovery"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -19,6 +19,6 @@ func ServiceConnection(ctx context.Context, serviceName string, registry discove
 	return grpc.Dial(
 		addrs[rand.Intn(len(addrs))],
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
-		grpc.WithUnaryInterceptor(otelgrpc.UnaryClientInterceptor()),
+		grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
 	)
 }

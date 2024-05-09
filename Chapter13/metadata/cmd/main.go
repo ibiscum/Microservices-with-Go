@@ -5,6 +5,7 @@ import (
 	"crypto/md5"
 	"flag"
 	"fmt"
+	"log"
 	"net"
 	"net/http"
 	_ "net/http/pprof"
@@ -40,7 +41,12 @@ func heavyOperation() {
 
 func main() {
 	logger, _ := zap.NewProduction()
-	defer logger.Sync()
+	defer func() {
+		err := logger.Sync()
+		if err != nil {
+			log.Panic()
+		}
+	}()
 
 	simulateCPULoad := flag.Bool("simulatecpuload", false, "simulate CPU load for profiling")
 	flag.Parse()
@@ -123,7 +129,7 @@ func main() {
 	if err != nil {
 		logger.Fatal("Failed to listen", zap.Error(err))
 	}
-	srv := grpc.NewServer(grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()))
+	srv := grpc.NewServer(grpc.StatsHandler(otelgrpc.NewServerHandler()))
 	reflection.Register(srv)
 	gen.RegisterMetadataServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {

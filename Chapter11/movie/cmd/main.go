@@ -29,7 +29,12 @@ const serviceName = "movie"
 
 func main() {
 	logger, _ := zap.NewProduction()
-	defer logger.Sync()
+	defer func() {
+		err := logger.Sync()
+		if err != nil {
+			log.Panic(err)
+		}
+	}()
 
 	f, err := os.Open("base.yaml")
 	if err != nil {
@@ -83,7 +88,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", zap.Error(err))
 	}
-	srv := grpc.NewServer(grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()))
+	srv := grpc.NewServer(grpc.StatsHandler(otelgrpc.NewServerHandler()))
 	reflection.Register(srv)
 	gen.RegisterMovieServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
