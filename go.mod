@@ -62,6 +62,6 @@ require (
 	github.com/confluentinc/confluent-kafka-go v1.9.2
 	github.com/confluentinc/confluent-kafka-go/v2 v2.4.0
 	github.com/hashicorp/consul/api v1.28.2
-	google.golang.org/grpc v1.63.2
+	google.golang.org/grpc v1.64.0
 	google.golang.org/protobuf v1.33.0
 )
