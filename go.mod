@@ -4,7 +4,7 @@ go 1.22.1
 
 require (
 	github.com/go-sql-driver/mysql v1.8.1
-	github.com/golang/mock v1.4.4
+	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/go-cmp v0.6.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0
