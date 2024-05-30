@@ -43,21 +43,21 @@ func main() {
 	defer movieSrv.GracefulStop()
 
 	opts := grpc.WithTransportCredentials(insecure.NewCredentials())
-	metadataConn, err := grpc.Dial(metadataServiceAddr, opts)
+	metadataConn, err := grpc.NewClient(metadataServiceAddr, opts)
 	if err != nil {
 		panic(err)
 	}
 	defer metadataConn.Close()
 	metadataClient := gen.NewMetadataServiceClient(metadataConn)
 
-	ratingConn, err := grpc.Dial(ratingServiceAddr, opts)
+	ratingConn, err := grpc.NewClient(ratingServiceAddr, opts)
 	if err != nil {
 		panic(err)
 	}
 	defer ratingConn.Close()
 	ratingClient := gen.NewRatingServiceClient(ratingConn)
 
-	movieConn, err := grpc.Dial(movieServiceAddr, opts)
+	movieConn, err := grpc.NewClient(movieServiceAddr, opts)
 	if err != nil {
 		panic(err)
 	}
