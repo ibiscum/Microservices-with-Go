@@ -40,7 +40,12 @@ func main() {
 			time.Sleep(1 * time.Second)
 		}
 	}()
-	defer registry.Deregister(ctx, instanceID, serviceName)
+	defer func() {
+		err := registry.Deregister(ctx, instanceID, serviceName)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 	metadataGateway := metadatagateway.New(registry)
 	ratingGateway := ratinggateway.New(registry)
 	ctrl := movie.New(ratingGateway, metadataGateway)
