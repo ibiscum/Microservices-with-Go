@@ -39,13 +39,12 @@ func main() {
 			time.Sleep(1 * time.Second)
 		}
 	}()
-	defer func () {
+	defer func() {
 		err := registry.Deregister(ctx, instanceID, serviceName)
 		if err != nil {
 			log.Fatal(err)
 		}
 	}()
-	registry.Deregister(ctx, instanceID, serviceName)
 	repo := memory.New()
 	ctrl := metadata.New(repo)
 	h := httphandler.New(ctrl)
