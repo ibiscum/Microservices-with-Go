@@ -49,7 +49,12 @@ func main() {
 			time.Sleep(1 * time.Second)
 		}
 	}()
-	defer registry.Deregister(ctx, instanceID, serviceName)
+	defer func() {
+		err := registry.Deregister(ctx, instanceID, serviceName)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 	repo := memory.New()
 	ctrl := rating.New(repo, nil)
 	h := grpchandler.New(ctrl)
