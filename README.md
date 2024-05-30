@@ -1,7 +1,6 @@
 # Microservices with Go
 
 [![build](https://github.com/ibiscum/Microservices-with-Go/actions/workflows/build.yml/badge.svg)](https://github.com/ibiscum/Microservices-with-Go/actions/workflows/build.yml)
-
 [![lint](https://github.com/ibiscum/Microservices-with-Go/actions/workflows/lint.yml/badge.svg)](https://github.com/ibiscum/Microservices-with-Go/actions/workflows/lint.yml)
 
 <a href="https://www.packtpub.com/product/microservices-with-go/9781804617007"><img src="https://m.media-amazon.com/images/I/412x+RC-FJL._SX403_BO1,204,203,200_.jpg" alt="Microservices with Go" height="256px" align="right"></a>
