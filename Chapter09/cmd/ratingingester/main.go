@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
 	"github.com/ibiscum/Microservices-with-Go/Chapter09/rating/pkg/model"
 )
 
