@@ -64,7 +64,7 @@ func (g *Gateway) PutRating(ctx context.Context, recordID model.RecordID, record
 		return err
 	}
 	url := "http://" + addrs[rand.Intn(len(addrs))] + "/ratng"
-	log.Printf("Calling rating service. Request: PUT " + url)
+	log.Printf("Calling rating service. Request: PUT %s\n", url)
 	req, err := http.NewRequest(http.MethodPut, addrs[0]+"/rating", nil)
 	if err != nil {
 		return err
