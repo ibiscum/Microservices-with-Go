@@ -30,7 +30,7 @@ func (g *Gateway) Get(ctx context.Context, id string) (*model.Metadata, error) {
 		return nil, err
 	}
 	url := "http://" + addrs[rand.Intn(len(addrs))] + "/metadata"
-	log.Printf("Calling metadata service. Request: GET " + url)
+	log.Printf("Calling metadata service. Request: GET %s\n", url)
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
