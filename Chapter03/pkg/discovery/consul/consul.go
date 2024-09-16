@@ -7,20 +7,20 @@ import (
 	"strconv"
 	"strings"
 
-	consul "github.com/hashicorp/consul/api"
+	capi "github.com/hashicorp/consul/api"
 	"github.com/ibiscum/Microservices-with-Go/Chapter03/pkg/discovery"
 )
 
 // Registry defines a Consul-based service regisry.
 type Registry struct {
-	client *consul.Client
+	client *capi.Client
 }
 
 // NewRegistry creates a new Consul-based service registry instance.
 func NewRegistry(addr string) (*Registry, error) {
-	config := consul.DefaultConfig()
+	config := capi.DefaultConfig()
 	config.Address = addr
-	client, err := consul.NewClient(config)
+	client, err := capi.NewClient(config)
 	if err != nil {
 		return nil, err
 	}
@@ -37,12 +37,12 @@ func (r *Registry) Register(ctx context.Context, instanceID string, serviceName 
 	if err != nil {
 		return err
 	}
-	return r.client.Agent().ServiceRegister(&consul.AgentServiceRegistration{
+	return r.client.Agent().ServiceRegister(&capi.AgentServiceRegistration{
 		Address: parts[0],
 		ID:      instanceID,
 		Name:    serviceName,
 		Port:    port,
-		Check:   &consul.AgentServiceCheck{CheckID: instanceID, TTL: "5s"},
+		Check:   &capi.AgentServiceCheck{CheckID: instanceID, TTL: "5s"},
 	})
 }
 
