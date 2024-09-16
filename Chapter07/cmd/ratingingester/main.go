@@ -59,7 +59,7 @@ func produceRatingEvents(topic string, producer *kafka.Producer, events []model.
 		}
 
 		if err := producer.Produce(&kafka.Message{
-			TopicPartition: kafka.TopicPartition{Topic: &topic, Partition: kafka.PartitionAny},
+			TopicPartition: kafka.TopicPartition{Topic: &topic, Partition: 0},
 			Value:          []byte(encodedEvent),
 		}, nil); err != nil {
 			return err

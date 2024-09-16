@@ -1,6 +1,6 @@
 module github.com/ibiscum/Microservices-with-Go
 
-go 1.22.1
+go 1.23.0
 
 require (
 	github.com/go-sql-driver/mysql v1.8.1
@@ -63,7 +63,6 @@ require (
 )
 
 require (
-	github.com/confluentinc/confluent-kafka-go v1.9.2
 	github.com/confluentinc/confluent-kafka-go/v2 v2.5.3
 	github.com/hashicorp/consul/api v1.29.4
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.30.0

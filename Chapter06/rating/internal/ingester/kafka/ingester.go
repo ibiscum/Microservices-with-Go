@@ -17,7 +17,6 @@ type Ingester struct {
 
 // NewIngester creates a new Kafka ingester.
 func NewIngester(addr string, groupID string, topic string) (*Ingester, error) {
-	kafka.NewConsumer()
 	consumer, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": addr,
 		"group.id":          groupID,
