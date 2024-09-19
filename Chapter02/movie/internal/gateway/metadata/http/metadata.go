@@ -22,7 +22,7 @@ func New(addr string) *Gateway {
 
 // Get gets movie metadata by a movie id.
 func (g *Gateway) Get(ctx context.Context, id string) (*model.Metadata, error) {
-	req, err := http.NewRequest(http.MethodGet, g.addr+"/metadata", nil)
+	req, err := http.NewRequest(http.MethodGet, g.addr+"/metadata/"+id, nil)
 	if err != nil {
 		return nil, err
 	}

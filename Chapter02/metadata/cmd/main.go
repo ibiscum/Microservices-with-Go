@@ -44,7 +44,7 @@ func main() {
 
 	log.Println("create new handler")
 	h := httphandler.New(ctrl)
-	http.Handle("/metadata", http.HandlerFunc(h.GetMetadata))
+	http.Handle("/metadata/{id}", http.HandlerFunc(h.GetMetadata))
 
 	log.Println("start serving")
 	if err := http.ListenAndServe(":8081", nil); err != nil {

@@ -23,12 +23,19 @@ func New(ctrl *rating.Controller) *Handler {
 
 // Handle handles PUT and GET /rating requests.
 func (h *Handler) Handle(w http.ResponseWriter, req *http.Request) {
-	recordID := model.RecordID(req.FormValue("id"))
+	paramId := req.URL.Query().Get("id")
+	recordID := model.RecordID(paramId)
+
+	// recordID := model.RecordID(req.FormValue("id"))
 	if recordID == "" {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	recordType := model.RecordType(req.FormValue("type"))
+
+	paramType := req.URL.Query().Get("type")
+	recordType := model.RecordType(paramType)
+
+	// recordType := model.RecordType(req.FormValue("type"))
 	if recordType == "" {
 		w.WriteHeader(http.StatusBadRequest)
 		return
@@ -41,7 +48,7 @@ func (h *Handler) Handle(w http.ResponseWriter, req *http.Request) {
 			return
 		}
 		if err := json.NewEncoder(w).Encode(v); err != nil {
-			log.Printf("Response encode error: %v\n", err)
+			log.Printf("response encode error: %v\n", err)
 		}
 	case http.MethodPut:
 		userID := model.UserID(req.FormValue("userId"))

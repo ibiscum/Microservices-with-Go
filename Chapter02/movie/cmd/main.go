@@ -22,7 +22,7 @@ func main() {
 
 	log.Println("create new handler")
 	h := httphandler.New(ctrl)
-	http.Handle("/movie", http.HandlerFunc(h.GetMovieDetails))
+	http.Handle("/movie/{id}", http.HandlerFunc(h.GetMovieDetails))
 
 	log.Println("start serving")
 	if err := http.ListenAndServe(":8083", nil); err != nil {

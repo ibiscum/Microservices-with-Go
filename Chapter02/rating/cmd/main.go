@@ -44,10 +44,10 @@ func main() {
 
 	log.Println("create new handler")
 	h := httphandler.New(ctrl)
-	http.Handle("/rating", http.HandlerFunc(h.Handle))
+	http.Handle("/rating/type/{type}/id/{id}", http.HandlerFunc(h.Handle))
 
 	log.Println("start serving")
 	if err := http.ListenAndServe(":8082", nil); err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 }
