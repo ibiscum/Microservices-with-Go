@@ -1,0 +1,14 @@
+[
+    {
+        "recordId": "1",
+        "recordType": "movie",
+        "userId": "u1",
+        "value": 7
+    },
+    {
+        "recordId": "2",
+        "recordType": "movie",
+        "userId": "u2",
+        "value": 8
+    }
+]

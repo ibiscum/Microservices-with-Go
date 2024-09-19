@@ -14,7 +14,7 @@ type Repository struct {
 	data map[string]*model.Metadata
 }
 
-// New creates a new memory repository.
+// New creates a new memory repository with initial content.
 func New() *Repository {
 	return &Repository{data: map[string]*model.Metadata{}}
 }
