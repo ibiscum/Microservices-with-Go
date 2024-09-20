@@ -1,0 +1,26 @@
+[
+    {
+        "recordId": "1",
+        "recordType": "movie",
+        "userId": "u1",
+        "value": 7
+    },
+    {
+        "recordId": "1",
+        "recordType": "movie",
+        "userId": "u3",
+        "value": 6
+    },
+    {
+        "recordId": "1",
+        "recordType": "movie",
+        "userId": "u4",
+        "value": 9
+    },
+    {
+        "recordId": "2",
+        "recordType": "movie",
+        "userId": "u2",
+        "value": 8
+    }
+]

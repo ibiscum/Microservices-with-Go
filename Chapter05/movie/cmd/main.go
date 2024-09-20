@@ -25,21 +25,21 @@ func main() {
 	var port int
 	flag.IntVar(&port, "port", 8083, "API handler port")
 	flag.Parse()
-	log.Printf("Starting the movie service on port %d", port)
+	log.Printf("starting the movie service on port %d", port)
 	registry, err := consul.NewRegistry("localhost:8500")
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	ctx := context.Background()
 	instanceID := discovery.GenerateInstanceID(serviceName)
 	if err := registry.Register(ctx, instanceID, serviceName, fmt.Sprintf("localhost:%d", port)); err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	go func() {
 		for {
 			if err := registry.ReportHealthyState(instanceID, serviceName); err != nil {
-				log.Println("Failed to report healthy state: " + err.Error())
+				log.Println("failed to report healthy state: " + err.Error())
 			}
 			time.Sleep(1 * time.Second)
 		}
@@ -48,7 +48,7 @@ func main() {
 	defer func() {
 		err := registry.Deregister(ctx, instanceID, serviceName)
 		if err != nil {
-			log.Panic(err)
+			log.Fatal(err)
 		}
 	}()
 	metadataGateway := metadatagateway.New(registry)
@@ -63,6 +63,6 @@ func main() {
 	reflection.Register(srv)
 	gen.RegisterMovieServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 }
