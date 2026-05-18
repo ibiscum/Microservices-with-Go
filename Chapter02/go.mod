@@ -1,3 +1,3 @@
 module github.com/ibiscum/Microservices-with-Go/Chapter02
 
-go 1.26
+go 1.25.0
