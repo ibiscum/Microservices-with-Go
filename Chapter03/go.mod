@@ -2,7 +2,7 @@ module github.com/ibiscum/Microservices-with-Go/Chapter03
 
 go 1.25.0
 
-require github.com/hashicorp/consul/api v1.30.0
+require github.com/hashicorp/consul/api v1.34.2
 
 require (
 	github.com/armon/go-metrics v0.4.1 // indirect
